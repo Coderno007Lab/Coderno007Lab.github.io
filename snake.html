@@ -9,11 +9,11 @@
   </style>
 </head>
 <body>
-<canvas width="400" height="400" id="game"></canvas>
+<canvas width="800" height="800" id="game"></canvas>
 <script>
 const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
-const grid = 20;
+const grid = 40;
 let snake = [{x: 160, y: 160}];
 let dx = grid, dy = 0;
 let food = {x: 320, y: 320};
@@ -22,7 +22,7 @@ let score = 0;
 function gameLoop() {
   requestAnimationFrame(gameLoop);
 
-  if (++count < 20) return;
+  if (++count < 0.00001) return;
   count = 0;
 
   const head = {x: snake[0].x + dx, y: snake[0].y + dy};
