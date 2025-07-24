@@ -22,7 +22,7 @@ let score = 0;
 function gameLoop() {
   requestAnimationFrame(gameLoop);
 
-  if (++count < 5) return;
+  if (++count < 0.1) return;
   count = 0;
 
   const head = {x: snake[0].x + dx, y: snake[0].y + dy};
